@@ -1,0 +1,107 @@
+{
+  "cutoff": "2026-07-15 00:00:00+00:00",
+  "method": "app 渠道内 category 精确分层 + tenure/pre_spend 标准化近邻匹配（对照可重用），自助法 95% 区间",
+  "identifiable_scope": "app 渠道、共同支持内、截点已成熟的参加账户",
+  "non_identifiable": [
+    "web 参加者 210 人：无同渠道未参加对照",
+    "共同支持外 app 参加者 0 人"
+  ],
+  "n_treated": 105,
+  "n_control": 105,
+  "n_matched": 105,
+  "support_excluded_treated": 0,
+  "naive_difference": {
+    "purchase_flag": 0.0,
+    "gross_spend": 0.0,
+    "net_spend": -1450.4571428571435,
+    "platform_net_spend": 833.3142857142857,
+    "refund": -263.82857142857165,
+    "goodwill": 0.0,
+    "basket_margin": -2067.6000000000004
+  },
+  "matched_ate": {
+    "purchase_flag": 0.12380952380952381,
+    "gross_spend": 3162.8571428571427,
+    "net_spend": 683.8285714285714,
+    "platform_net_spend": 833.3142857142857,
+    "refund": 764.7428571428571,
+    "goodwill": 17.142857142857142,
+    "basket_margin": -1154.6095238095238
+  },
+  "bootstrap_ci": {
+    "purchase_flag": [
+      0.01904761904761905,
+      0.22857142857142856
+    ],
+    "gross_spend": [
+      353.1428571428572,
+      6028.857142857143
+    ],
+    "net_spend": [
+      -2243.9114285714286,
+      3510.119761904762
+    ],
+    "platform_net_spend": [
+      753.8952380952381,
+      910.0380952380953
+    ],
+    "refund": [
+      -170.33499999999998,
+      1705.3714285714286
+    ],
+    "goodwill": [
+      0.0,
+      34.285714285714285
+    ],
+    "basket_margin": [
+      -2379.922380952381,
+      35.84523809523799
+    ]
+  },
+  "composition": {
+    "treated_app": {
+      "n": 105,
+      "category_mix": {
+        "food": 0.3333,
+        "home": 0.3333,
+        "wear": 0.3333
+      },
+      "mean_tenure": 43.57,
+      "mean_pre_spend": 40593.18,
+      "zero_purchase_share": 0.1429,
+      "acquisition_cost_mean": 120.0
+    },
+    "control_app": {
+      "n": 105,
+      "category_mix": {
+        "food": 0.3333,
+        "home": 0.3333,
+        "wear": 0.3333
+      },
+      "mean_tenure": 41.57,
+      "mean_pre_spend": 23524.87,
+      "zero_purchase_share": 0.1429,
+      "acquisition_cost_mean": 0.0
+    },
+    "web_treated": {
+      "n": 210,
+      "category_mix": {
+        "food": 0.3333,
+        "home": 0.3333,
+        "wear": 0.3333
+      },
+      "mean_tenure": 43.57,
+      "mean_pre_spend": 43372.05,
+      "zero_purchase_share": 0.1429,
+      "acquisition_cost_mean": 120.0
+    }
+  },
+  "limitations": [
+    "web 渠道只有参加者没有同期对照，210 名 web 参加者的个体因果效应不可识别，未计入 ATE",
+    "app 参加者中 0 人在 caliper=1.0 内无同分层近邻，落在共同支持之外",
+    "参加者活动前人均消费显著高于对照，匹配只能平衡可观测协变量，未观测混杂仍可能存在",
+    "退货行为按本次活动的门槛与力度观测，不能外推为任意优惠力度下不变的规律",
+    "区间为自助法百分位区间，描述收益推断不确定性；费用核对以合同条款为准，不受区间影响",
+    "未成熟篮子按截点剔除或标注，不与成熟篮子合并估计"
+  ]
+}

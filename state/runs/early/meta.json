@@ -1,0 +1,9 @@
+{
+  "run_id": "early",
+  "cutoff": "2026-06-20 10:00:00+00:00",
+  "sources": [
+    "history.json",
+    "updates.json"
+  ],
+  "basket_count": 360
+}

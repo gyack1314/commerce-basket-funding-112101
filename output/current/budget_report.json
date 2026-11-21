@@ -1,0 +1,102 @@
+{
+  "cutoff": "2026-07-15 00:00:00+00:00",
+  "currency": "CNY",
+  "cash_available": 200000,
+  "disputed_reserve": 30000,
+  "already_committed": 90000,
+  "usable": 80000,
+  "accepted_plans": [
+    {
+      "id": "other-event",
+      "platform_budget": 90000,
+      "status": "accepted",
+      "accepted_at": "2026-06-16T10:00:00+00:00"
+    }
+  ],
+  "evaluations": [
+    {
+      "offer_id": "next-high",
+      "threshold": 30000,
+      "amount": 3000,
+      "platform_budget": 130000,
+      "eligible_categories": [
+        "food",
+        "home"
+      ],
+      "support": {
+        "observed_thresholds": [
+          30000
+        ],
+        "observed_categories": [
+          "food",
+          "home"
+        ],
+        "observed_refund_rate": 0.1022,
+        "threshold_supported": true,
+        "categories_supported": true,
+        "refund_behavior_note": "退款率仅在门槛 30000、面额 3000 的本次活动中观测；改变门槛/面额后消费者凑单与退货决策会变化，不得把该比率当作新方案的不变参数"
+      },
+      "standalone_feasible": false,
+      "standalone_gap": 50000,
+      "cumulative_committed": 220000,
+      "joint_feasible": false,
+      "joint_gap": 50000,
+      "warnings": [
+        "争议出资 30000 分已预留，不计入可用预算"
+      ]
+    },
+    {
+      "offer_id": "next-low",
+      "threshold": 25000,
+      "amount": 2000,
+      "platform_budget": 120000,
+      "eligible_categories": [
+        "food",
+        "home"
+      ],
+      "support": {
+        "observed_thresholds": [
+          30000
+        ],
+        "observed_categories": [
+          "food",
+          "home"
+        ],
+        "observed_refund_rate": 0.1022,
+        "threshold_supported": false,
+        "categories_supported": true,
+        "refund_behavior_note": "退款率仅在门槛 30000、面额 3000 的本次活动中观测；改变门槛/面额后消费者凑单与退货决策会变化，不得把该比率当作新方案的不变参数"
+      },
+      "standalone_feasible": false,
+      "standalone_gap": 40000,
+      "cumulative_committed": 340000,
+      "joint_feasible": false,
+      "joint_gap": 170000,
+      "warnings": [
+        "门槛 25000 无历史观察支持，该门槛下的收益与退货不可确定推断",
+        "争议出资 30000 分已预留，不计入可用预算"
+      ]
+    }
+  ],
+  "joint_acceptance": {
+    "offers": [
+      "next-high",
+      "next-low"
+    ],
+    "required_sum": 250000,
+    "plus_existing_commitment": 90000,
+    "usable_now": 80000,
+    "all_jointly_feasible": false,
+    "actual_gap_if_accepted_together": 170000
+  },
+  "trace_refs": {
+    "budget_fact": "platform",
+    "accepted_plan_facts": [
+      "other-event"
+    ],
+    "offer_facts": [
+      "next-low",
+      "next-high"
+    ]
+  }
+}

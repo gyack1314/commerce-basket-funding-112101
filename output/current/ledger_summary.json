@@ -1,0 +1,79 @@
+{
+  "cutoff": "2026-07-15 00:00:00+00:00",
+  "total_current_required": {
+    "m0": 324450,
+    "m1": 86400
+  },
+  "total_confirmed": {
+    "m1": 600
+  },
+  "total_pending_delta": {
+    "m1": 600
+  },
+  "frozen_keys": [],
+  "claims": [
+    {
+      "claim_id": "claim-ok",
+      "basket_id": "b0005",
+      "merchant_id": "m0",
+      "target": "return_qty",
+      "target_id": "r5",
+      "proposed": 1,
+      "status": "accepted",
+      "known_at": "2026-06-17T10:00:00+00:00",
+      "revises": null,
+      "affected_funding_keys": [
+        [
+          "b0005",
+          "m0",
+          "d5-cross"
+        ],
+        [
+          "b0005",
+          "m0",
+          "d5-platform"
+        ],
+        [
+          "b0005",
+          "m0",
+          "d5-shop"
+        ],
+        [
+          "b0005",
+          "m1",
+          "d5-cross"
+        ],
+        [
+          "b0005",
+          "m1",
+          "d5-platform"
+        ]
+      ],
+      "decision_note": "异议成立：目标字段已替换为 proposed，整篮按新事实重算"
+    },
+    {
+      "claim_id": "claim-open-v2",
+      "basket_id": "b0001",
+      "merchant_id": "m1",
+      "target": "unit_cost",
+      "target_id": "b0001-l1",
+      "proposed": 9000,
+      "status": "accepted",
+      "known_at": "2026-06-23T10:00:00+00:00",
+      "revises": "claim-open",
+      "affected_funding_keys": [
+        [
+          "b0001",
+          "m1",
+          "d1-cross"
+        ],
+        [
+          "b0001",
+          "m1",
+          "d1-platform"
+        ]
+      ],
+      "decision_note": "异议成立：目标字段已替换为 proposed，整篮按新事实重算"
+    }
+  ]
+}
