@@ -1,0 +1,30 @@
+{
+  "synthetic": true,
+  "timezone": "UTC",
+  "tables": {
+    "returns": [
+      {
+        "id": "late-return",
+        "line_id": "b0005-l1",
+        "return_qty": 2,
+        "confirmed": true,
+        "goodwill": 0,
+        "occurred_at": "2026-05-31T10:00:00+00:00",
+        "known_at": "2026-06-22T10:00:00+00:00"
+      }
+    ],
+    "claims": [
+      {
+        "id": "claim-open-v2",
+        "revises": "claim-open",
+        "basket_id": "b0001",
+        "merchant_id": "m1",
+        "target": "unit_cost",
+        "target_id": "b0001-l1",
+        "proposed": 9000,
+        "status": "accepted",
+        "known_at": "2026-06-23T10:00:00+00:00"
+      }
+    ]
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "references": [
+    [
+      "lines",
+      "basket_id",
+      "baskets",
+      "id"
+    ],
+    [
+      "baskets",
+      "account_id",
+      "cohort",
+      "id"
+    ],
+    [
+      "returns",
+      "line_id",
+      "lines",
+      "id"
+    ]
+  ],
+  "tables": {
+    "baskets": {
+      "id": "str",
+      "account_id": "str",
+      "paid_at": "str",
+      "known_at": "str",
+      "mature_at": "str",
+      "campaign": "str"
+    },
+    "lines": {
+      "id": "str",
+      "line_id": "str",
+      "basket_id": "str",
+      "merchant_id": "str",
+      "quantity": "int",
+      "unit_price": "int",
+      "unit_cost": "int",
+      "category": "str"
+    },
+    "discounts": {
+      "id": "str",
+      "basket_id": "str",
+      "kind": "str",
+      "eligible_lines": "list",
+      "amount": "int",
+      "threshold": "int",
+      "merchant_share": "dict"
+    },
+    "cohort": {
+      "id": "str",
+      "participated": "bool",
+      "channel": "str",
+      "tenure_days": "int",
+      "eligible_from": "str",
+      "category": "str"
+    },
+    "observations": {
+      "id": "str",
+      "account_id": "str",
+      "period_start": "str",
+      "period_end": "str",
+      "purchase_baskets": "list",
+      "pre_period_spend": "int",
+      "acquisition_cost": "int"
+    },
+    "returns": {
+      "id": "str",
+      "line_id": "str",
+      "return_qty": "int",
+      "confirmed": "bool",
+      "goodwill": "int",
+      "occurred_at": "str",
+      "known_at": "str"
+    },
+    "claims": {
+      "id": "str",
+      "basket_id": "str",
+      "merchant_id": "str",
+      "target": "str",
+      "target_id": "str",
+      "proposed": "int",
+      "status": "str",
+      "known_at": "str"
+    },
+    "confirmed_funding": {
+      "id": "str",
+      "basket_id": "str",
+      "merchant_id": "str",
+      "discount_id": "str",
+      "amount": "int",
+      "confirmed_at": "str"
+    },
+    "budgets": {
+      "id": "str",
+      "currency": "str",
+      "cash_available": "int",
+      "disputed": "int"
+    },
+    "offers": {
+      "id": "str",
+      "threshold": "int",
+      "amount": "int",
+      "platform_budget": "int",
+      "eligible_categories": "list"
+    },
+    "accepted_plans": {
+      "id": "str",
+      "platform_budget": "int",
+      "status": "str",
+      "accepted_at": "str"
+    }
+  }
+}
